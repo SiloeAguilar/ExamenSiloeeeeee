@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_examenandreasiloe/noticias.dart';
+import 'package:flutter_examenandreasiloe/cambios.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -13,6 +15,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeScreen(),
         '/noticias': (context) => NoticiasPage(),
+        '/cambios':(context) => CambioMonedaPage()
       },
     );
   }
@@ -43,11 +46,11 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/noticias');
               },
             ),
-            ListTile(
+             ListTile(
               title: Text('Cambio de monedas'),
               leading: Icon(Icons.currency_exchange),
               onTap: () {
-                Navigator.pushNamed(context, '/cambioMoneda');
+                Navigator.pushNamed(context, '/cambios');
               },
             ),
             ListTile(
